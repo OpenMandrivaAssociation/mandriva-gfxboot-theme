@@ -7,7 +7,7 @@ Name: mandriva-gfxboot-theme
 Version: %version
 Release: %release
 License: GPL 
-Group: System/Configuration/Theme
+Group: System/Configuration/Boot and Init
 URL: http://svn.mandriva.com/cgi-bin/viewvc.cgi/theme/gfxboot/trunk/
 Source0: %{name}.tar
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-root
