@@ -1,6 +1,6 @@
 
 %define version 0.22
-%define release %mkrel 1
+%define release %mkrel 2
 
 Summary: Mandriva graphical boot theme
 Name: mandriva-gfxboot-theme
@@ -13,7 +13,7 @@ Source0: %{name}.tar
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-root
 BuildRequires: gfxboot
 Requires(post): perl-Archive-Cpio
-Exclusivearch: %ix86
+Exclusivearch: %ix86 x86_64
 
 %description
 This package provides the Mandriva gfxboot theme. This theme is used by the
