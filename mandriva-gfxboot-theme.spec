@@ -1,6 +1,6 @@
 
 %define version 0.33
-%define release %mkrel 1
+%define release %mkrel 2
 
 Summary: Mandriva graphical boot theme
 Name: mandriva-gfxboot-theme
