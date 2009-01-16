@@ -1,5 +1,5 @@
 
-%define version 0.37
+%define version 0.38
 %define release %mkrel 1
 
 Summary: Mandriva graphical boot theme
