@@ -41,7 +41,7 @@ Patch0022: we-want-support-for-all-languages-in-grub-s-gfxmenu.patch
 Patch0023: get-rid-of-some-easter-eggs-esp.-penguins.patch
 
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-root
-BuildRequires: gfxboot
+BuildRequires: gfxboot-devel
 Requires(post): perl-Archive-Cpio
 Exclusivearch: %ix86 x86_64
 
