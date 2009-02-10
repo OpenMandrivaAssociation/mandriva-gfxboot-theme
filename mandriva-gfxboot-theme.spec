@@ -40,6 +40,7 @@ Patch0020: do-not-check-there-is-enough-memory.patch
 Patch0021: do-not-have-files-both-in-the-tarball-and-in-the-dir.patch
 Patch0022: we-want-support-for-all-languages-in-grub-s-gfxmenu.patch
 Patch0023: get-rid-of-some-easter-eggs-esp.-penguins.patch
+Patch0024: use-mandriva-color-scheme.patch
 
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-root
 BuildRequires: gfxboot-devel
