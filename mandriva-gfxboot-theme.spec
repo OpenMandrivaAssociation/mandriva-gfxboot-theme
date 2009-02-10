@@ -14,7 +14,8 @@ Source0: openSUSE.tar.bz2
 Source1: back.jpg
 Source2: welcome.jpg
 Source3: timer_a.jpg
-Source4: grub-gfxmenu
+#Source4: text.jpg
+Source5: grub-gfxmenu
 
 Patch0001: add-Norsk-nynorsk-in-language-menu-and-rename.patch
 Patch0002: replace-openSUSE-strings-with-Mandriva-Linux.patch
@@ -83,7 +84,7 @@ install message $dest/boot/
 
 # install grub-gfxmenu
 install -d %{buildroot}%{_sbindir}
-install %{SOURCE4} %{buildroot}%{_sbindir}
+install %{SOURCE5} %{buildroot}%{_sbindir}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
