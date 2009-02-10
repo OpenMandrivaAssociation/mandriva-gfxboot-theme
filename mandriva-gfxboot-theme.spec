@@ -73,7 +73,8 @@ install -m 644 %{SOURCE1} %{SOURCE2} %{SOURCE3} data-install/
 install -m 644 %{SOURCE1} %{SOURCE3} data-boot/
 
 %build
-%make
+#gfxboot binary is needed for the build and is in /usr/sbin
+PATH="$PATH:/usr/sbin" %make
 
 %install
 rm -rf $RPM_BUILD_ROOT
