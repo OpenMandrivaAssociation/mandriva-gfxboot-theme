@@ -62,7 +62,7 @@ for i in %patches; do patch -p1 -i $i; done
 %endif
 
 # goes with get-rid-of-some-easter-eggs-esp.-penguins.patch:
-rm data-*/{hapysuse.mod,kroete.dat,pabout.txt,panim.jpg,panim_a.jpg,pback.jpg,phead.jpg}
+rm data-*/{hapysuse.mod,kroete.dat,pabout.txt,panim.jpg,panim_a.jpg,pback.jpg,phead.jpg,text.jpg}
 rm -r penguin_src src/penguin.inc
 
 # english talk file is big and unused by default, get rid of it:
