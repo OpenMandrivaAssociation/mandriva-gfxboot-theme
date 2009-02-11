@@ -41,6 +41,7 @@ Patch0021: do-not-have-files-both-in-the-tarball-and-in-the-dir.patch
 Patch0022: we-want-support-for-all-languages-in-grub-s-gfxmenu.patch
 Patch0023: get-rid-of-some-easter-eggs-esp.-penguins.patch
 Patch0024: use-mandriva-color-scheme.patch
+Patch0025: do-not-hide-linux-nonfb-entry-for-now-since-it-s-cau.patch
 
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-root
 BuildRequires: gfxboot-devel
