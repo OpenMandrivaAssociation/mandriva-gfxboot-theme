@@ -1,4 +1,4 @@
-%define version 4.1.19.4
+%define version 4.1.19.5
 %define release %mkrel 1
 
 Summary: Mandriva graphical boot theme
@@ -13,7 +13,7 @@ Source: mandriva-gfxboot-theme-%{version}.tar.lzma
 Source1: back.jpg
 Source2: welcome.jpg
 Source3: timer_a.jpg
-Source4: mandriva.pcx
+#Source4: mandriva.pcx
 Source5: grub-gfxmenu
 
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-root
@@ -30,7 +30,7 @@ to boot.
 %setup -q
 
 # our jpegs:
-install -m 644 %{SOURCE1} %{SOURCE2} %{SOURCE3} %{SOURCE4} data-install/
+install -m 644 %{SOURCE1} %{SOURCE2} %{SOURCE3} data-install/
 install -m 644 %{SOURCE1} %{SOURCE3} data-boot/
 
 %build
