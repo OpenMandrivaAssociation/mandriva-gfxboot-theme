@@ -1,4 +1,4 @@
-%define version 4.1.19.8
+%define version 4.1.19.9
 %define release %mkrel 1
 
 Summary: Mandriva graphical boot theme
