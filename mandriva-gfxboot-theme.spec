@@ -1,5 +1,5 @@
 %define version 4.1.19.13
-%define release %mkrel 1
+%define release %mkrel 2
 
 Summary: Mandriva graphical boot theme
 Name: mandriva-gfxboot-theme
@@ -35,7 +35,9 @@ install -m 644 %{SOURCE1} %{SOURCE3} data-boot/
 
 %build
 #gfxboot binary is needed for the build and is in /usr/sbin
-PATH="$PATH:/usr/sbin" %make
+#make sure we only build one task at a time since po generation is broken
+#otherwise
+PATH="$PATH:/usr/sbin" make
 
 %install
 rm -rf $RPM_BUILD_ROOT
