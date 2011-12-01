@@ -40,7 +40,7 @@ install -m 644 %{SOURCE1} %{SOURCE3} data-boot/
 PATH="$PATH:/usr/sbin" make
 
 %install
-rm -rf $RPM_BUILD_ROOT
+rm -rf %{buildroot}
 dest=%{buildroot}%{_datadir}/gfxboot/themes/Mandriva
 install -d $dest/install $dest/boot
 install bootlogo bootlogo.dir/* $dest/install/
@@ -51,7 +51,7 @@ install -d %{buildroot}%{_sbindir}
 install %{SOURCE5} %{buildroot}%{_sbindir}
 
 %clean
-rm -rf $RPM_BUILD_ROOT
+rm -rf %{buildroot}
 
 %post
 if [ "$1" -gt 1 ]; then
