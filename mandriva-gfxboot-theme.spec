@@ -13,7 +13,7 @@ Source4:	mandriva.pcx
 Source5:	grub-gfxmenu
 BuildRequires:	gfxboot-devel
 Requires(post):	perl-Archive-Cpio
-Exclusivearch:	%{ix86} x86_64
+BuildArch:	noarch
 
 %description
 This package provides the Mandriva gfxboot theme. This theme is used by the
@@ -35,7 +35,7 @@ PATH="$PATH:/usr/sbin" make
 
 %install
 install -d %{buildroot}%{_datadir}/gfxboot/themes/Mandriva/install/
-install bootlogo bootlogo.dir/* %{buildroot}%{_datadir}/gfxboot/themes/Mandriva/install/
+install -m644 bootlogo bootlogo.dir/* %{buildroot}%{_datadir}/gfxboot/themes/Mandriva/install/
 install -m644 message -D %{buildroot}%{_datadir}/gfxboot/themes/Mandriva/boot/message
 
 install -m755 %{SOURCE5} -D %{buildroot}%{_sbindir}/grub-gfxmenu
