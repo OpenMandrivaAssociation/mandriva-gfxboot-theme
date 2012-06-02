@@ -1,25 +1,19 @@
-%define version 4.1.19.25
-%define release %mkrel 2
-
-Summary: Mandriva graphical boot theme
-Name: mandriva-gfxboot-theme
-Version: %version
-Release: %release
-License: GPL 
-Group: System/Configuration/Boot and Init
-URL: http://svn.mandriva.com/cgi-bin/viewvc.cgi/soft/theme/mandriva-gfxboot-theme/trunk/
-Source: mandriva-gfxboot-theme-%{version}.tar.lzma
-#
-Source1: back.jpg
-Source2: welcome.jpg
-Source3: timer_a.jpg
-Source4: mandriva.pcx
-Source5: grub-gfxmenu
-
-BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-root
-BuildRequires: gfxboot-devel
-Requires(post): perl-Archive-Cpio
-Exclusivearch: %ix86 x86_64
+Summary:	Mandriva graphical boot theme
+Name:		mandriva-gfxboot-theme
+Version:	4.1.19.25
+Release:	2
+License:	GPL 
+Group:		System/Configuration/Boot and Init
+URL:		http://svn.mandriva.com/cgi-bin/viewvc.cgi/soft/theme/mandriva-gfxboot-theme/trunk/
+Source0:	%{name}-%{version}.tar.lzma
+Source1:	back.jpg
+Source2:	welcome.jpg
+Source3:	timer_a.jpg
+Source4:	mandriva.pcx
+Source5:	grub-gfxmenu
+BuildRequires:	gfxboot-devel
+Requires(post):	perl-Archive-Cpio
+Exclusivearch:	%{ix86} x86_64
 
 %description
 This package provides the Mandriva gfxboot theme. This theme is used by the
@@ -30,8 +24,8 @@ to boot.
 %setup -q
 
 # our jpegs:
-install -m 644 %{SOURCE1} %{SOURCE2} %{SOURCE3} %{SOURCE4} data-install/
-install -m 644 %{SOURCE1} %{SOURCE3} data-boot/
+cp %{SOURCE2} %{SOURCE3} %{SOURCE4} data-install/
+cp %{SOURCE1} %{SOURCE3} data-boot/
 
 %build
 #gfxboot binary is needed for the build and is in /usr/sbin
@@ -40,29 +34,17 @@ install -m 644 %{SOURCE1} %{SOURCE3} data-boot/
 PATH="$PATH:/usr/sbin" make
 
 %install
-rm -rf %{buildroot}
-dest=%{buildroot}%{_datadir}/gfxboot/themes/Mandriva
-install -d $dest/install $dest/boot
-install bootlogo bootlogo.dir/* $dest/install/
-install message $dest/boot/
+install -d %{buildroot}%{_datadir}/gfxboot/themes/Mandriva/install/
+install bootlogo bootlogo.dir/* %{buildroot}%{_datadir}/gfxboot/themes/Mandriva/install/
+install -m644 message -D %{buildroot}%{_datadir}/gfxboot/themes/Mandriva/boot/message
 
-# install grub-gfxmenu
-install -d %{buildroot}%{_sbindir}
-install %{SOURCE5} %{buildroot}%{_sbindir}
-
-%clean
-rm -rf %{buildroot}
+install -m755 %{SOURCE5} -D %{buildroot}%{_sbindir}/grub-gfxmenu
 
 %post
 if [ "$1" -gt 1 ]; then
-   %_sbindir/grub-gfxmenu --update-gfxmenu
+   %{_sbindir}/grub-gfxmenu --update-gfxmenu
 fi
 
 %files
-%defattr(-,root,root,-)
-%doc
-%_sbindir/*
-%_datadir/gfxboot/themes/Mandriva/
-
-
-
+%{_sbindir}/*
+%{_datadir}/gfxboot/themes/Mandriva/
