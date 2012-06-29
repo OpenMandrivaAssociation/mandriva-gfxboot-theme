@@ -14,6 +14,7 @@ Source5:	grub-gfxmenu
 BuildRequires:	gfxboot-devel
 BuildRequires:	jpeg-progs
 BuildRequires:	netpbm
+BuildRequires:	rgb
 Requires(post):	perl-Archive-Cpio
 BuildArch:	noarch
 
