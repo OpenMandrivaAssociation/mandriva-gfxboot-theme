@@ -12,6 +12,7 @@ Source3:	timer_a.jpg
 Source4:	mandriva.pcx
 Source5:	grub-gfxmenu
 BuildRequires:	gfxboot-devel
+BuildRequires:	jpeg-progs
 Requires(post):	perl-Archive-Cpio
 BuildArch:	noarch
 
