@@ -13,6 +13,7 @@ Source4:	mandriva.pcx
 Source5:	grub-gfxmenu
 BuildRequires:	gfxboot-devel
 BuildRequires:	jpeg-progs
+BuildRequires:	netpbm
 Requires(post):	perl-Archive-Cpio
 BuildArch:	noarch
 
