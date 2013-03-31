@@ -1,7 +1,7 @@
 Summary:	Mandriva graphical boot theme
 Name:		mandriva-gfxboot-theme
-Version:	4.1.19.28
-Release:	4
+Version:	4.1.19.29
+Release:	1
 License:	GPLv2+
 Group:		System/Configuration/Boot and Init
 URL:		http://svn.mandriva.com/cgi-bin/viewvc.cgi/soft/theme/mandriva-gfxboot-theme/trunk/
