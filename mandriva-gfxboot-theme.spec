@@ -4,7 +4,7 @@ Version:	4.1.19.29
 Release:	10
 License:	GPLv2+
 Group:		System/Configuration/Boot and Init
-URL:		http://svn.mandriva.com/cgi-bin/viewvc.cgi/soft/theme/mandriva-gfxboot-theme/trunk/
+URL:		https://svn.mandriva.com/cgi-bin/viewvc.cgi/soft/theme/mandriva-gfxboot-theme/trunk/
 Source0:	%{name}-%{version}.tar.xz
 #Source1:	back.jpg
 #Source2:	welcome.jpg
